@@ -1,0 +1,246 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+};
+
+$light : #0071BC;
+$dark : #F15A24;
+$base : ghostwhite;
+$second-base: black;
+$third-base: #106E71;
+$bright: #C1272D;
+
+@font-face {
+    font-family: "Fronds Getturing";
+    src: url(https://www.fontspace.com/frondsgetturingbrushfont-font-f85943);
+};
+
+$font-family: (
+    'basic':'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,
+    'simple':'Fronds Getturing', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+);
+
+$font-size: (
+    'tiny': 1.3rem,
+    'small': 1.7rem,
+    'regular' : 2.5rem,
+    'medium' : 3rem,
+);
+
+$line-height: (
+    'low': 1.5rem,
+    'regular': 2.5rem,
+    'medium': 3rem,
+    'high': 3.5rem,
+
+);
+
+$height: (
+    'toddler': 80px,
+    'teen': 120px,
+    'adult': 1080px,
+);
+
+$width: (
+    'wide': 100px,
+);
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-areas: 
+    "header header header header"
+    "left content content right"
+    "left content content right"
+    "left content content right"
+    "left content content right";
+    gap: 20px;
+    min-height:100vh ;
+    font-size: map-get($font-size, small);
+    line-height: map-get($line-height, low);
+    height: map-get($height, teen);
+    background-color: $third-base;
+    color: $base;
+}
+
+nav {
+    width: 100%;
+    height: 104px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+    border-bottom: 0.4px solid $base;
+    font-family: map-get($font-family,basic);
+}
+
+.logo {
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+a {
+    color: $base;
+    text-decoration: none;
+}
+
+li {
+    display: inline-block;
+    font-size: map-get($font-size,tiny );
+    padding: 0 1.3rem;
+    list-style: none;
+    transition: 300ms ease-in-out;
+}
+
+li:hover {
+    text-decoration: underline;
+  }
+
+.grid-header {
+    display: flex;
+    justify-content: start;
+    grid-area: header;
+};
+
+h1 {
+    font-size: map-get($font-size,medium);
+    line-height: map-get($line-height,high);
+};
+  
+h2 {
+    font-size: map-get($font-size,small);
+    line-height: map-get($line-height,medium);
+};
+  
+h3 {
+    font-size: map-get($font-size,small);
+    line-height: map-get($line-height,regular);
+};
+
+p {
+    width: 500px;
+    font-family:map-get($font-family,simple);
+}
+  
+.grid-left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-area: left;
+};
+
+.grid-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: content;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 240px;
+    background: linear-gradient(rgba(0, 0, 0, 0.262), rgba(0, 0, 0, 0.565)), url(../images/bg.jpeg) no-repeat center / cover;
+    border: 2px solid $base; 
+};
+
+
+
+  
+  
+.grid-right-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $third-base;
+    color: $base;
+    flex-wrap: wrap;
+    flex-direction: column;
+    grid-area: right;
+    width: 300px;
+};
+
+#modal {
+    padding: 1rem 2rem;
+    margin-top: 30px;
+    width: 200px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: map-get($font-size, tiny);
+}
+button {
+    display: inline-block;
+    background-color: $third-base;
+    color: $base;
+    border: none;
+    cursor: pointer;
+    font-size: 5px;
+    transition: background-color 0.3s ease;
+};
+  
+button:hover {
+    background-color: $light;
+};
+
+#food-fact-content {
+    position: relative;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    font-size: 1.3rem;
+    width: 210px;
+    justify-self: center;
+    align-self: center;
+}
+
+#food-fact-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    margin-top: 30px;
+    padding: 1.5rem;
+    height: 230px;
+    background: linear-gradient(0.5turn, rgba(0, 0, 0, 0.668), rgba(0, 0, 0, 0.668));
+    overflow-x: hidden;
+    border: 2px solid $base;
+};
+
+@keyframes slideIn {
+    0% {
+      transform: translateX(120%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+  
+@keyframes slideOut {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform :translateX(-120%);
+    }
+}
+  
+.slide-in {
+    animation-name: slideIn;
+}
+  
+.slide-out {
+    animation-name: slideOut;
+}
