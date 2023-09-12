@@ -1,7 +1,7 @@
 # Fmood, the Diatry
 
 Fmood, the Diatry was created to help users bring mindfulness to how the food they eat affects their mood! <br>
-This project utilized two API's as well as JavaScript to add dynamic interactivity that the user can utilize to gather nutritional facts and information about food. Here is the link to the deployed project [here](https://google.com) **link is just a placeholder** <!-- Add actual deployed link -->
+This project utilized two API's as well as JavaScript to add dynamic interactivity that the user can utilize to gather nutritional facts and information about food. Here is the link to the deployed project [here](https://google.com) **link is just a placeholder**
 
 
 ## User Story
@@ -31,11 +31,6 @@ Fmood is a digital webpage that allows a user to log their eating habits, along 
 - [Edamam](https://edamam.com)
 - [Unsplash](https://unsplash.com/developers)
 
-
-## Support
-
-You can reach Jeremiah with any questions or comments [here](https://twitter/__dsatpm).
-<!-- Add your own contact info here -->
 
 ## Authors and Acknowledgment
 
