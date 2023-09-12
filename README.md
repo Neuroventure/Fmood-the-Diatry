@@ -21,6 +21,10 @@ N/A
 
 Fmood is a digital webpage that allows a user to log their eating habits, along with introspective commentary of their feelings about the meal they logged. You can request nutrition facts if you have ever wondered how many calories were in the apple you just ate, or your entire 4 course meal! By clicking 'Log Your Meal' a user can input their meal, how they felt before, and how they felt after. Their information will be saved to local storage and remain until the next time they log a meal.
 
+https://kimkristion.github.io/Fmood-the-Diatry/
+
+![Deployed Application](image.png)
+
 
 ## Sources and Relevant Information
 #### Food Facts Sources:
