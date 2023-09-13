@@ -514,16 +514,19 @@ footer {
 }
 
 .about h1,
-.resources h1 {
+#grid-content-resources h1 {
   padding-bottom: 14px;
+  text-align: left;
+  
 }
 
 .about {
   gap: 16px;
 }
 
-.resources p {
+#grid-content-resources p {
   width: 440px;
+  text-align: left;
 }
 
 .authors {
