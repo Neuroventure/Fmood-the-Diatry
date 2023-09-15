@@ -95,7 +95,7 @@ span {
 
 /* Navbar */
 .navbar {
-  font-family: 'Italianno', cursive;
+  font-family: 'Italianno';
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -192,6 +192,16 @@ span {
   align-items: center;
   grid-area: content;
   background: linear-gradient(0.5turn, rgba(0, 0, 0, 0.726), rgba(0, 0, 0, 0.714));
+  border: 3px solid var(--bright);
+  border-radius: 0.5rem;
+}
+
+#grid-content-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: content;
   border: 3px solid var(--bright);
   border-radius: 0.5rem;
 }
@@ -468,19 +478,20 @@ span {
 }
 
 /* Page Specific Styles */
-.resources,
-.about {
+.resources {
   gap: 20px;
+  text-align: center;
 }
 
-.about h1,
+.about {
+  gap: 8px;
+  text-align: center;
+  font-size: 14px;
+}
+
+
 .resources h1 {
   padding-bottom: 14px;
-}
-
-.about {
-  background-color: var(--shaddy);
-  gap: 16px;
 }
 
 .resources p {
@@ -492,7 +503,7 @@ span {
 }
 
 .emphasis {
-  background-color: var(--second-base);
+  background-color: var(--light);
   font-weight: bold;
 }
 
@@ -520,7 +531,7 @@ button:hover {
   width: 100%;
   height: 4px;
   border-radius: 4px;
-  background-color: var(--second-base);
+  background-color: var(--dark);
   bottom: -6px;
   left: 0;
   transform-origin: right;
